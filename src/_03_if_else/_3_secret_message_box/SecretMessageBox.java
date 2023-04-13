@@ -21,15 +21,19 @@ public class SecretMessageBox {
 		
 	
 	// 1. Set a password in a String variable
-	
+	String password = ("PASSWORD1234567890-=");
 	// 2. Using a pop-up, ask the first person for a secret message and store it in a variable
-
+String superDuperSecretMessage = JOptionPane.showInputDialog("Leave a secret message for the next person.");
 	// 3. Now use a pop-up to tell the NEXT user that they can only see the secret message 
 	//    if they can guess the passcode
-
+String enterPassword = JOptionPane.showInputDialog("Give password");
 	// 4. If their guess matches the password, show them the secret message
-
+if (enterPassword.equals(password)) {
+	JOptionPane.showMessageDialog(null, superDuperSecretMessage);
+}
 	// 5. If the password does not match, pop-up "INTRUDER!!"
-
+else {
+	JOptionPane.showMessageDialog(null, "INTRUDER");
+}
 }
 }
